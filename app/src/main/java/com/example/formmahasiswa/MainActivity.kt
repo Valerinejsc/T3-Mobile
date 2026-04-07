@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity() {
         val btnTampilkan = findViewById<Button>(R.id.btnTampilkan)
         val tvHasil = findViewById<TextView>(R.id.tvHasil)
 
-        // Efek Border Biru saat Nama Diisi
         etNama.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 if (!s.isNullOrEmpty()) {
@@ -57,7 +56,6 @@ class MainActivity : AppCompatActivity() {
 
             val hobi = if (hobiList.isEmpty()) "Tidak ada hobi" else hobiList.joinToString(", ")
 
-            // Format Hasil agar rapi seperti di gambar (Bold label)
             tvHasil.text = android.text.Html.fromHtml("""
                 <b>Nama</b> &nbsp;&nbsp;&nbsp;: $nama <br/>
                 <b>Kelamin</b> : $gender <br/>
